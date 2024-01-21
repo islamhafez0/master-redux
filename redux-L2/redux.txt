@@ -1,0 +1,16 @@
+## Synchronous Actions {
+    - As soon as an action was dispatched, the state immediately updated.
+}
+## Asynchronous Actions {
+    - Asynchronous API calls to fetch data from an end point and use that data your application.
+}
+## Async actions Createor {
+    - axios {
+        requests to an api end point
+    }
+    - redux-thunx {
+        Define async action creatores
+        thunk action creator returns function not action object
+        Midlleware
+    }
+}

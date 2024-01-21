@@ -1,0 +1,55 @@
+- What is Redux?
+== Redux is a predictable state container for javascript applications.
+
+- What are the three core concepts of redux?
+== 1- A store: that holds the state of your applications
+== 2- An action: that describes the changes of the state of application.
+== 3- A reducer: which actually carries out the transition depends on the action.
+
+- Let's Deep dive into these three principles.
+{
+    - The state of your application is stored in an object tree within a single store.
+    - Maintain our application state in a single object which would be managed by the redux store.
+    
+    - The only way to change the state is to emit(dispatch) an action, an object describing what happens.
+    - so the state is read-only, means that you can't directly change it.
+    - so if you wanna update or change the the state, you need to let redux know with an action.
+
+    - To specify how the state tree is transformed by actions, you write pure reducers.
+    - reducer - reducer(prevState, action) => newState;
+}
+
+## Actions: {
+    - the only way your application can interact with the store.
+    - carry some information from your app to redux store.
+    - plain javascript objects
+    - have a type property that indicates the action being performed.
+    - the type property is typically defined as a string constants. 
+    - So, {
+        -action is object with a type property.
+        - action creator is the function that returns an action.
+    }
+}
+
+## Redux store: {
+    - one store for the entire application.
+    - Holds application state.
+    - Allows access to state via getState() method.
+    - Allows state to be updated via dispatch(action) function which accepts action as a param. 
+    - Registers listeners via subscribe(listener) method which accepts listener as a function.
+}
+
+- we create store using the createStore() method;
+- we can split our reducer to multible reducers by using the 
+compineReducers({key(name): value(reducer2), key(name): value(reducer2)})
+method which accepts an object with key(convintion name) and value(reducer function) pair
+- we can track the state changes using subscribe function.
+
+## Middleware: {
+    - Is the suggested way to extend redux with more custom functionality
+    - provides a third-party extension that point between dispatching an action,
+     and the moment it reaches the reducer
+    - use middleware for logging, crash reporting, performing asynchronous actions, etc.
+    ex: redux-logger is our example usage in this lecture.
+    So middleware is a way to enhance the behavior of the Redux dispatch function.
+}

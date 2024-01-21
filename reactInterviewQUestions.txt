@@ -1,0 +1,46 @@
+# React
+
+1- what do you like and dislike about react?
+    likes: Declarative syntax, component based architecture, rich ecosystem
+    dislikes: seo issues, learning curve for beginners
+
+2- conditional rendering & list rendering?
+    Conditional Rendering: Use if statements or ternary operators to conditionally render components.
+    List Rendering: Utilize map function to render lists of elements dynamically.
+
+3- Context API
+    Share values across components without pass props explicitly
+
+4- Hooks
+    functions that let you use state and other react features in fun components
+
+
+5- Optimization (useMemo, useCallback)
+    useMemo: Memoizes values to avoid unnecessary recalculation.
+    useCallback: Memoizes callback function to prevent unnecessery re-creation.
+
+6- How do you share logic across component(props pattern, custom hooks)
+    props: Pass down state and functions as props
+    custom hooks: Abstract and share logic using custom hooks.
+
+7- what are some packages that you use with react?
+    redux, axios(HTTP requests), react-router-dom
+
+# Redux
+
+1- what is redux?
+    is a state management library for javascript applications.
+
+2- explain the differnt part of redux (store, reducers, actions, actions creator)
+    store: holds the application state.
+    reducers: pure functions that specify how state changes in response to actions.
+    actions: plain JavaScript objects describing the change.
+    action creators: functions that create actions.
+
+3- why should you dispatch actions to change the state not the store directly?
+    Dispatching actions ensures a unidirectional flow and allows middleware to intercept, 
+    log, or modify actions before they reach the reducers.
+
+4- in a reducer , why you should return new object not modify the existing one?
+    Redux relies on immutability. Returning a new object ensures that the previous state is
+    not mutated, facilitating predictable state changes and efficient updates.
